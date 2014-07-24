@@ -2,7 +2,6 @@
 <resources>
 
     <string name="app_name">FlatUI</string>
-
     <string name="red_section">Red</string>
     <string name="pink_section">Pink</string>
     <string name="purple_section">Purple</string>
@@ -11,10 +10,10 @@
     <string name="yellow_section">Yellow</string>
     <string name="orange_section">Orange</string>
     <string name="gray_section">Gray</string>
-
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
