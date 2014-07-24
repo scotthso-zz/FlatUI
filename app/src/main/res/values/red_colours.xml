@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name = "text_color">#FFF</color>
+
+    <color name = "chestnut_rose">#D24D57</color>
+    <color name = "pomegranate">#F22613</color>
+    <color name = "red">#FF0000</color>
+    <color name = "thunderbird">#D91E18</color>
+    <color name = "old_brick">#96281B</color>
+
+
+</resources>

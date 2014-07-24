@@ -54,14 +54,26 @@ public class MainActivity extends Activity
         fragmentManager.beginTransaction()
                 .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
                 .commit();
+
+        switch(position) {
+            case 0:
+                RedFragment r = new RedFragment();
+                FragmentManager rf = getFragmentManager();
+                rf.beginTransaction().replace(R.id.container, r).commit();
+                break;
+
+            case 1:
+                PinkFragment p = new PinkFragment();
+                FragmentManager pf = getFragmentManager();
+                pf.beginTransaction().replace(R.id.container, p).commit();
+
+        }
     }
 
     public void onSectionAttached(int number) {
         switch (number) {
             case 1:
-                
                 mTitle = getString(R.string.red_section);
-
                 break;
             case 2:
                 mTitle = getString(R.string.pink_section);

@@ -1,27 +1,65 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="5"
     tools:context="scottso.flatui.RedFragment">
 
-    <LinearLayout
+
+
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/chestnut_rose"
+            android:text="CHESTNUT ROSE #D24D57"
+            android:layout_weight="1"
+            style="@style/color_box"
+            android:id="@+id/textView" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/pomegranate"
+                android:text="POMEGRANATE #F22613"
+                android:layout_weight="1"
+                style="@style/color_box"
+                android:id="@+id/textView2" />
+
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
+        android:background="@color/red"
+        android:text="RED          #FF0000"
         android:layout_weight="1"
-        android:background="#D24D57" >
-    </LinearLayout>
-    <LinearLayout
+        style="@style/color_box"
+        android:id="@+id/textView3" />
+
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
+        android:layout_height="200dp"
+        android:background="@color/thunderbird"
+        android:text="THUNDERBIRD #D91E18"
         android:layout_weight="1"
-        android:background="#F22613" >
-    </LinearLayout>
-    <LinearLayout
+        style="@style/color_box"
+        android:id="@+id/textView4" />
+
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_height="200dp"
+        android:background="@color/old_brick"
+        android:text="OLD BRICK #96281B"
         android:layout_weight="1"
-        android:background="#FF0000" >
-    </LinearLayout>
-</FrameLayout>
+        style="@style/color_box"
+        android:id="@+id/textView5" />
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
