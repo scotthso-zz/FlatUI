@@ -102,9 +102,15 @@ public class NavigationDrawerFragment extends Fragment {
                 android.R.layout.simple_list_item_activated_1,
                 android.R.id.text1,
                 new String[]{
-                        getString(R.string.title_section1),
-                        getString(R.string.title_section2),
-                        getString(R.string.title_section3),
+                        getString(R.string.red_section),
+                        getString(R.string.pink_section),
+                        getString(R.string.purple_section),
+                        getString(R.string.blue_section),
+                        getString(R.string.green_section),
+                        getString(R.string.yellow_section),
+                        getString(R.string.orange_section),
+                        getString(R.string.gray_section)
+
                 }));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;

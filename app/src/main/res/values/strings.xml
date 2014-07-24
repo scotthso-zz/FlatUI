@@ -2,9 +2,16 @@
 <resources>
 
     <string name="app_name">FlatUI</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
+
+    <string name="red_section">Red</string>
+    <string name="pink_section">Pink</string>
+    <string name="purple_section">Purple</string>
+    <string name="blue_section">Blue</string>
+    <string name="green_section">Green</string>
+    <string name="yellow_section">Yellow</string>
+    <string name="orange_section">Orange</string>
+    <string name="gray_section">Gray</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
