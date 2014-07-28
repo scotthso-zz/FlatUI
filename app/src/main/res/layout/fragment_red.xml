@@ -3,63 +3,122 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:weightSum="5"
+
     tools:context="scottso.flatui.RedFragment">
 
 
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        >
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:weightSum="5"
+            >
 
             <TextView
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="@dimen/box_height"
             android:background="@color/chestnut_rose"
-            android:text="CHESTNUT ROSE #D24D57"
+            android:text="#D24D57"
             android:layout_weight="1"
             style="@style/color_box"
             android:id="@+id/textView" />
 
             <TextView
+            android:layout_width="match_parent"
+             android:layout_height="@dimen/box_height"
+              android:background="@color/pomegranate"
+              android:text="#F22613"
+               android:layout_weight="1"
+               style="@style/color_box"
+               android:id="@+id/textView2" />
+
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:background="@color/pomegranate"
-                android:text="POMEGRANATE #F22613"
+                android:layout_height="@dimen/box_height"
+                android:background="@color/red"
+                android:text="#FF0000"
                 android:layout_weight="1"
                 style="@style/color_box"
-                android:id="@+id/textView2" />
+                android:id="@+id/textView3" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@color/red"
-        android:text="RED          #FF0000"
-        android:layout_weight="1"
-        style="@style/color_box"
-        android:id="@+id/textView3" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/box_height"
+                android:background="@color/thunderbird"
+                android:text="#D91E18"
+                android:layout_weight="1"
+                style="@style/color_box"
+                android:id="@+id/textView4" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@color/thunderbird"
-        android:text="THUNDERBIRD #D91E18"
-        android:layout_weight="1"
-        style="@style/color_box"
-        android:id="@+id/textView4" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/box_height"
+                android:background="@color/old_brick"
+                android:text="#96281B"
+                android:layout_weight="1"
+                style="@style/color_box"
+                android:id="@+id/textView5" />
+        </TableRow>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@color/old_brick"
-        android:text="OLD BRICK #96281B"
-        android:layout_weight="1"
-        style="@style/color_box"
-        android:id="@+id/textView5" />
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:weightSum="5"
+            >
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/box_height"
+                android:background="#EF4836"
+                android:text="#EF4836"
+                android:layout_weight="1"
+                style="@style/color_box"
+                android:id="@+id/textView6" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/box_height"
+                android:background="#D64541"
+                android:text="#D64541"
+                android:layout_weight="1"
+                style="@style/color_box"
+                android:id="@+id/textView7" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/box_height"
+                android:background="#C0392B"
+                android:text="#C0392B"
+                android:layout_weight="1"
+                style="@style/color_box"
+                android:id="@+id/textView8" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/box_height"
+                android:background="#CF000F"
+                android:text="#CF000F"
+                android:layout_weight="1"
+                style="@style/color_box"
+                android:id="@+id/textView9" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/box_height"
+                android:background="#E74C3C"
+                android:text="#E74C3C"
+                android:layout_weight="1"
+                style="@style/color_box"
+                android:id="@+id/textView10" />
 
+            </TableRow>
 
-
+    </TableLayout>
 
 
 </LinearLayout>

@@ -66,6 +66,13 @@ public class MainActivity extends Activity
                 PinkFragment p = new PinkFragment();
                 FragmentManager pf = getFragmentManager();
                 pf.beginTransaction().replace(R.id.container, p).commit();
+                break;
+
+            case 2:
+                PurpleFragment pu = new PurpleFragment();
+                FragmentManager puf = getFragmentManager();
+                puf.beginTransaction().replace(R.id.container, pu).commit();
+                break;
 
         }
     }
