@@ -74,6 +74,12 @@ public class MainActivity extends Activity
                 puf.beginTransaction().replace(R.id.container, pu).commit();
                 break;
 
+            case 3:
+                BlueFragment b = new BlueFragment();
+                FragmentManager bf = getFragmentManager();
+                bf.beginTransaction().replace(R.id.container, b).commit();
+                break;
+
         }
     }
 
