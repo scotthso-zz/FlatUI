@@ -80,6 +80,17 @@ public class MainActivity extends Activity
                 bf.beginTransaction().replace(R.id.container, b).commit();
                 break;
 
+            case 4:
+                GreenFragment g = new GreenFragment();
+                FragmentManager gf = getFragmentManager();
+                gf.beginTransaction().replace(R.id.container, g).commit();
+                break;
+
+            case 5:
+                YellowFragment y = new YellowFragment();
+                FragmentManager yf = getFragmentManager();
+                yf.beginTransaction().replace(R.id.container, y).commit();
+
         }
     }
 
