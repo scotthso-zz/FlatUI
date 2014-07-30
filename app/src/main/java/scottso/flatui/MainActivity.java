@@ -90,6 +90,19 @@ public class MainActivity extends Activity
                 YellowFragment y = new YellowFragment();
                 FragmentManager yf = getFragmentManager();
                 yf.beginTransaction().replace(R.id.container, y).commit();
+                break;
+
+            case 6:
+                OrangeFragment o = new OrangeFragment();
+                FragmentManager of = getFragmentManager();
+                of.beginTransaction().replace(R.id.container, o).commit();
+                break;
+
+            case 7:
+                GrayFragment gr = new GrayFragment();
+                FragmentManager grf = getFragmentManager();
+                grf.beginTransaction().replace(R.id.container, gr).commit();
+                break;
 
         }
     }
