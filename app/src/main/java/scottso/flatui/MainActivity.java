@@ -3,33 +3,16 @@ package scottso.flatui;
 import android.app.Activity;
 
 import android.app.ActionBar;
-import android.app.Fragment;
 import android.app.FragmentManager;
-import android.content.Context;
-import android.os.Build;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
-
 
 public class MainActivity extends Activity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
-    /**
-     * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
-     */
     private NavigationDrawerFragment mNavigationDrawerFragment;
-
-    /**
-     * Used to store the last screen title. For use in {@link #restoreActionBar()}.
-     */
     private CharSequence mTitle;
 
     @Override
@@ -39,7 +22,6 @@ public class MainActivity extends Activity
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getFragmentManager().findFragmentById(R.id.navigation_drawer);
-        mTitle = getTitle();
 
         // Set up the drawer.
         mNavigationDrawerFragment.setUp(
@@ -49,91 +31,41 @@ public class MainActivity extends Activity
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
-        // update the main content by replacing fragments
-        FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
-                .commit();
-
-        switch(position) {
-            case 0:
-                RedFragment r = new RedFragment();
-                FragmentManager rf = getFragmentManager();
-                rf.beginTransaction().replace(R.id.container, r).commit();
-                break;
-
-            case 1:
-                PinkFragment p = new PinkFragment();
-                FragmentManager pf = getFragmentManager();
-                pf.beginTransaction().replace(R.id.container, p).commit();
-                break;
-
-            case 2:
-                PurpleFragment pu = new PurpleFragment();
-                FragmentManager puf = getFragmentManager();
-                puf.beginTransaction().replace(R.id.container, pu).commit();
-                break;
-
-            case 3:
-                BlueFragment b = new BlueFragment();
-                FragmentManager bf = getFragmentManager();
-                bf.beginTransaction().replace(R.id.container, b).commit();
-                break;
-
-            case 4:
-                GreenFragment g = new GreenFragment();
-                FragmentManager gf = getFragmentManager();
-                gf.beginTransaction().replace(R.id.container, g).commit();
-                break;
-
-            case 5:
-                YellowFragment y = new YellowFragment();
-                FragmentManager yf = getFragmentManager();
-                yf.beginTransaction().replace(R.id.container, y).commit();
-                break;
-
-            case 6:
-                OrangeFragment o = new OrangeFragment();
-                FragmentManager of = getFragmentManager();
-                of.beginTransaction().replace(R.id.container, o).commit();
-                break;
-
-            case 7:
-                GrayFragment gr = new GrayFragment();
-                FragmentManager grf = getFragmentManager();
-                grf.beginTransaction().replace(R.id.container, gr).commit();
-                break;
-
-        }
+        final ColourFragment fragment = new ColourFragment();
+        final FragmentManager fm = getFragmentManager();
+        setTitle(position);
+        fragment.setLayoutId(position);
+        fm.beginTransaction().replace(R.id.container, fragment).commit();
     }
 
-    public void onSectionAttached(int number) {
-        switch (number) {
-            case 1:
+    public void setTitle(int pos) {
+        switch (pos) {
+            case ColourFragment.RED:
                 mTitle = getString(R.string.red_section);
                 break;
-            case 2:
+            case ColourFragment.PINK:
                 mTitle = getString(R.string.pink_section);
                 break;
-            case 3:
+            case ColourFragment.PURPLE:
                 mTitle = getString(R.string.purple_section);
                 break;
-            case 4:
+            case ColourFragment.BLUE:
                 mTitle = getString(R.string.blue_section);
                 break;
-            case 5:
+            case ColourFragment.GREEN:
                 mTitle = getString(R.string.green_section);
                 break;
-            case 6:
+            case ColourFragment.YELLOW:
                 mTitle = getString(R.string.yellow_section);
                 break;
-            case 7:
+            case ColourFragment.ORANGE:
                 mTitle = getString(R.string.orange_section);
                 break;
-            case 8:
+            case ColourFragment.GRAY:
                 mTitle = getString(R.string.gray_section);
                 break;
         }
+        setTitle(mTitle);
     }
 
     public void restoreActionBar() {
@@ -142,7 +74,6 @@ public class MainActivity extends Activity
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setTitle(mTitle);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -168,45 +99,4 @@ public class MainActivity extends Activity
         }
         return super.onOptionsItemSelected(item);
     }
-
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
-        private static final String ARG_SECTION_NUMBER = "section_number";
-
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
-        public static PlaceholderFragment newInstance(int sectionNumber) {
-            PlaceholderFragment fragment = new PlaceholderFragment();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        public PlaceholderFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            return rootView;
-        }
-
-        @Override
-        public void onAttach(Activity activity) {
-            super.onAttach(activity);
-            ((MainActivity) activity).onSectionAttached(
-                    getArguments().getInt(ARG_SECTION_NUMBER));
-        }
-    }
-
 }
