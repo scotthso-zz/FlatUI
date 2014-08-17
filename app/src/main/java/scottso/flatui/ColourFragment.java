@@ -6,6 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 public class ColourFragment extends Fragment {
     public static final int RED = 0;
     public static final int PINK = 1;
@@ -20,7 +23,16 @@ public class ColourFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(mLayoutId, container, false);
+        View rootView = inflater.inflate(mLayoutId, container, false);
+
+        AdView adView = (AdView) rootView.findViewById(R.id.adView);
+
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice("AD11D7FFE6781DBD8C42C8D86C9C99EA")
+                .build();
+
+        adView.loadAd(adRequest);
+        return rootView;
     }
 
     public void setLayoutId(int colour) {

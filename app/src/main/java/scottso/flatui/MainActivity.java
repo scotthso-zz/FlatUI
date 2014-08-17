@@ -31,6 +31,7 @@ public class MainActivity extends Activity
 
     @Override
     public void onNavigationDrawerItemSelected(int position) {
+
         final ColourFragment fragment = new ColourFragment();
         final FragmentManager fm = getFragmentManager();
         setTitle(position);
